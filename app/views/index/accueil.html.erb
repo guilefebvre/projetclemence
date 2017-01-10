@@ -1,0 +1,80 @@
+ 
+<div class=container>
+
+     <div id="barremenu">
+
+          <div class="row">
+              <div class="col-md-8">
+                   <ul class="nav nav-pills nav-justified ">
+                      <li role="presentation"  class="active"> <%= link_to 'Accueil', :controller=>'index', :action=>'accueil' %></li>
+                      <li role="presentation" > <%= link_to 'Photos', :controller=>'index', :action=>'photos' %></li>
+                      <li role="presentation"> <%= link_to 'M ecrire', :controller=>'index', :action=>'contact' %></li>
+                  </ul>
+              </div>
+
+              <div class="col-md-4">
+                <%= render "shared/reseaux_sociaux_haut" %>                
+              </div>
+         </div>
+
+    </div>
+
+
+        <div class="row">
+            <div class="col-md-12">
+                 <div  class="page-header" >
+                        <h1>Bienvenue sur mon site,</h1>
+                        <p>
+                        <h1> N'hésitez pas à me laissez des messages !</h1>
+                  </div>
+            </div>
+        </div>
+
+    
+       <div class="row">
+
+        <div class="modal fade" id="youtubeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div id="videoModalContainer">
+
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button id="CloseModalButton" type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+           <div class="col-md-8"  >
+            
+              <%=render "index/accueil_contenu" %>
+            
+           </div>
+            
+           <div class="col-md-4"  >  
+               <%=render "shared/menu_fixe_droit" %>
+          </div>     
+
+      </div>
+</div>
+
+      <%=render "shared/footer" %>
+
+
+
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+      <!-- Loading Images for faster page load based on : START Fast & Agile YouTube Embed by Schoberg.net -->
+      <script src="JS/YouTubeDefaultImageLoader.js"></script>
+
+
+
+      <!--<script src="js/iframe_Api_VideoLoader.js"></script>-->
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
