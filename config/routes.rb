@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 root :to => "index#accueil"
+
   get "/"=> "index#accueil"
   get "/accueil"=> "index#accueil"
 
