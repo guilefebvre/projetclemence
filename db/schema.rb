@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 20170129191415) do
     t.datetime "updated_at", null: false
     t.integer  "afficher"
   end
+  
+  
 
   create_table "messages", force: :cascade do |t|
     t.string   "nom"
