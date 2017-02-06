@@ -1,0 +1,51 @@
+<div class=container>
+
+ <div id="barremenu">
+
+      <div class="row">
+            <div class="col-md-8">
+                           <ul class="nav nav-pills nav-justified ">
+                         <li role="presentation"> <%= link_to 'Accueil', :controller=>'index', :action=>'accueil' %></li>
+                          <li role="presentation"  > <%= link_to 'Photos', :controller=>'index', :action=>'photos' %></li>
+                          <li role="presentation" class="active"> <%= link_to "M'écrire", :controller=>'index', :action=>'contact' %></li>
+                          </ul>
+            </div>
+
+            <div class="col-md-4">
+              <%= render "shared/reseaux_sociaux_haut" %>                
+            </div>
+
+     </div>
+</div>
+
+
+      <div class="row">
+
+           <div class="col-md-8"  >  
+           
+           <h1> il y a <%=@message.count%> membre dans la base</h1>
+               <%  @message.each do |f|  %>  
+                   <p></p>
+                   ---------------------------
+                   <p> <%= f.prenom %>   <%=link_to "Modifier", :controller=>'index', :action=>'modifier_messages', :id=>f.id%> <%=link_to "Effacer", :controller=>'index', :action=>'effacer_messages', :id=>f.id%>   </p>
+                   <p> <%= f.nom %></p>
+                   <p> <%= f.message %></p>
+                   <p> <%= f.mail %></p>
+                   
+               
+               <% end %>
+           </div>
+            
+           <div class="col-md-4"  >  
+               <%=render "shared/menu_fixe_droit" %>
+          </div>     
+
+      </div>
+
+
+    
+
+</div>
+
+
+  <%=render "shared/footer" %>

@@ -1,0 +1,43 @@
+ 
+        <div class="formulaire_contact">
+          
+              <form action="/update/<%=@message.id%>" method="POST">   
+          
+              
+              
+              <div class="form-group row">
+                <label for="nom-input" class="col-2 col-form-label">Nom</label>
+                <div class="col-10">
+                  <input class="form-control" type="text" placeholder=<%=@message.nom%> id="nom-input"  name="msg[nom]">
+                </div>
+              </div>
+              
+              <div class="form-group row">
+                <label for="prenom-input" class="col-2 col-form-label">Prénom</label>
+                <div class="col-10">
+                  <input class="form-control" type="text" placeholder=<%=@message.prenom%> id="prenom-input"  name="msg[prenom]">
+                </div>
+              </div>
+              
+              <div class="form-group row">
+                <label for="msg-input" class="col-2 col-form-label">Message</label>
+                <div class="col-10">
+                  <input class="form-control" type="text" placeholder=<%=@message.message%> id="example-url-input" name="msg[message]">
+                </div>
+              </div>
+              
+               <div class="form-group row">
+              <label for="mail-input" class="col-2 col-form-label">Mail</label>
+              <div class="col-10">
+                <input class="form-control" type="email" placeholder=<%=@message.mail%> id="email-input"  name="msg[mail]">
+              </div>
+            </div>
+            
+            
+       
+             
+              <button type="submit" class="btn btn-primary">Envoyer</button>
+              
+            </form>     
+          
+  </div>

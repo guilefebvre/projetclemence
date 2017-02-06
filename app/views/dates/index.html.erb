@@ -1,0 +1,33 @@
+<div class=container>
+
+
+
+
+      <div class="row">
+
+           <div class="col-md-8"  >  
+           
+           <h1> il y a <%=@evenements.count%> évènements dans la base</h1>
+               <%  @evenements.each do |f|  %>  
+                   <p></p>
+                   ---------------------------
+                   <p> Intitulé :  <%= f.nom %>  </p>
+                   <p> Date en français : <%= f.date_texte %></p>
+                   <p> Lien web : <%= f.lien %></p>
+                   <p> date de début : <%= f.ladate %></p>
+                    <p>Evènement actif ?  : <%= f.afficher %></p>
+                    <p>  <%=link_to "Effacer", date_path(f),:method => :delete%></p>
+            
+               <% end %>
+           </div>
+            
+           
+
+      </div>
+
+
+    
+
+</div>
+
+
